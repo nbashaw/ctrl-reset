@@ -5,7 +5,7 @@ $(function(){
       $('p#blog').fadeIn('fast');
     }, 
     function () {
-      $('p#blog').fadeOut('fast');
+      $('p#blog').hide();
     }
   );
   
@@ -14,7 +14,7 @@ $(function(){
       $('p#tb').fadeIn('fast');
     }, 
     function () {
-      $('p#tb').fadeOut('fast');
+      $('p#tb').hide();
     }
   );
   
@@ -23,7 +23,7 @@ $(function(){
       $('p#contact').fadeIn('fast');
     }, 
     function () {
-      $('p#contact').fadeOut('fast');
+      $('p#contact').hide();
     }
   );
   
