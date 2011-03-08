@@ -22,10 +22,11 @@ body {
 #container {
   @include centered;
   width: $width;
-  padding: 100px;
+  padding: 50px 100px;
   background-color: #fff;
   margin-top: 100px;
   @include b-shadow;
+  text-align: center;
 }
 
 h1#logo {
@@ -40,4 +41,42 @@ h2#tag {
   @include notext;
   background: url(../img/tag.png) no-repeat;
   height: 36px;
+  margin-bottom: 30px;
 }
+
+ul {
+  li {
+    color: #aaa;
+    display: inline;
+    margin: 0 5px;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}
+
+
+#hoverzone {
+  height: 30px;
+  p {
+    display: none;
+    color: #aaa;
+    font-size: 26px;
+    position: relative;
+    top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
