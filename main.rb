@@ -15,6 +15,10 @@ class CtrlReset < Sinatra::Base
     erb :index
   end
   
+  get '/team' do
+     erb :team
+   end
+  
   get '/contact' do
     erb :contact
   end

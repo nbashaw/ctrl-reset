@@ -38,7 +38,7 @@ body {
   width: $width;
   padding: 50px 100px;
   background-color: #fff;
-  margin-top: 100px;
+  margin-top: 80px;
   @include b-shadow;
   text-align: center;
 }
@@ -52,6 +52,7 @@ h1#logo {
 
 img#logo_small {
   width: 300px;
+  margin-bottom: 20px;
 }
 
 h2#tag {
@@ -62,11 +63,12 @@ h2#tag {
   margin-bottom: 30px;
 }
 
-ul {
+ul#nav {
   li {
     color: #aaa;
     display: inline;
-    margin: 0 5px;
+    padding: 0 15px;
+    border-right: 1px solid #aaa;
     a {
       text-decoration: none;
       color: #000;
@@ -74,6 +76,9 @@ ul {
     a:hover {
       color: #ED1D25;
     }
+  }
+  li.no_bar {
+    border: none;
   }
 }
 
@@ -89,7 +94,7 @@ ul {
   }
 }
 
-/* form styles */
+/* contact form styles */
 
 form#contact {
   width: $width;
@@ -133,7 +138,26 @@ form#contact {
 }
 
 
+/* team page styles */
 
+ul#team_ul {
+  margin-top: 20px;
+  background: url(../img/amp.png) no-repeat;
+  background-position: 51%;
+  height: 100px;
+  li {
+    padding-top: 30px;
+    display: inline-block;
+    width: 49%;
+    h2 {  font-size: 22px;  }
+    h3 {  font-size: 14px;  color: #000; font-style: italic; font-weight: normal; }
+  } 
+}
+
+p.italic {
+  font-style: italic;
+  font-size: 20px;
+}
 
 
 

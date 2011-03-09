@@ -1,6 +1,14 @@
 $(function(){
   
   // talking menu functionality
+  $("li#team_link").hover(
+    function () {
+      $('p#team').fadeIn('fast');
+    }, 
+    function () {
+      $('p#team').hide();
+    }
+  );
   $("li#blog_link").hover(
     function () {
       $('p#blog').fadeIn('fast');
