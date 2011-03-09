@@ -8,7 +8,7 @@ Bundler.setup
 require 'sinatra'
 require 'haml'
 
-use Rack::ForceDomain, ENV["DOMAIN"]
+#use Rack::ForceDomain, ENV["DOMAIN"]
 
 require './main.rb'
 run CtrlReset
