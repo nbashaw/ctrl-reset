@@ -3,7 +3,7 @@ class CtrlReset < Sinatra::Base
   # Sinatra configuration
   enable :static
   set :public, 'public'
-  config.middleware.use Rack::ForceDomain, ENV["DOMAIN"]
+  #config.middleware.use Rack::ForceDomain, ENV["DOMAIN"]
 
   # Haml configuration
   set :haml, {:format => :html5}
