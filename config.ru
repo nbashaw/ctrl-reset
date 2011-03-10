@@ -5,14 +5,10 @@
 require 'rubygems'
 require 'bundler/setup'
 
-# dependencies
-require 'sinatra'
-require 'haml'
-require 'rack/force_domain'
-require './ctrlreset'
-
 # force a canonical domain
+require 'rack/force_domain'
 use Rack::ForceDomain, ENV["DOMAIN"]
 
 # start your engines
+require './ctrlreset'
 run Sinatra::Application

@@ -1,3 +1,7 @@
+require 'sinatra'
+require 'haml'
+require 'erb'
+
 get '/css/:sheet.css' do
   scss params[:sheet].to_sym
 end
