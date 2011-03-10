@@ -1,5 +1,5 @@
 # Shotgun command-line switches
-#\ -s thin -o 0.0.0.0
+#\ -s thin
 
 # load up the bundled environment
 require 'rubygems'
@@ -14,4 +14,5 @@ require './ctrlreset'
 # force a canonical domain
 use Rack::ForceDomain, ENV["DOMAIN"]
 
-run CtrlReset
+# start your engines
+run Sinatra::Application
