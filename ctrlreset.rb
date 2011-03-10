@@ -41,5 +41,5 @@ get '/thanks' do
 end
 
 not_found do
-  erb :404
+  erb :status404
 end
