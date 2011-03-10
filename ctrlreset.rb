@@ -19,11 +19,17 @@ get '/contact' do
   erb :contact
 end
 
-#post '/mail' do
-#  Pony.mail :to => 'nbashaw@gmail.com',
-#            :from => 'me@example.com',
-#            :subject => 'Howdy, Partna!'
-#end  
+post '/mail' do
+  Pony.mail :to => 'nbashaw@gmail.com',  
+     :from => "#{params[:email]}",
+     :subject => "Contact Form",
+     :body=> "#{params[:message]}, --- Contact Address #{params[:email]}",
+     :via => :smtp
+end  
+
+get '/thanks' do
+  erb :thanks
+end
 
 not_found do
   redirect '/'
