@@ -25,6 +25,7 @@ post '/mail' do
      :subject => "Contact Form",
      :body=> "#{params[:message]}, --- Contact Address #{params[:email]}",
      :via => :smtp
+     redirect '/thanks', 303
 end  
 
 get '/thanks' do
