@@ -9,7 +9,7 @@ require 'bundler/setup'
 require 'sinatra'
 require 'haml'
 require 'rack/force_domain'
-require './main'
+require './ctrlreset'
 
 # force a canonical domain
 use Rack::ForceDomain, ENV["DOMAIN"]
