@@ -20,11 +20,19 @@ get '/contact' do
 end
 
 post '/mail' do
-  Pony.mail :to => 'nbashaw@gmail.com',  
-     :from => "#{params[:email]}",
-     :subject => "Contact Form",
+  Pony.mail :to => 'Nathan Bashaw <nbashaw@gmail.com>',  
+     :from => 'Ctrl+Reset Contact Form <nbashaw@gmail.com>',
+     :subject => 'Ctrl+Reset Contact Form',
      :body=> "#{params[:message]}, --- Contact Address #{params[:email]}",
-     :via => :smtp
+     :via => :smtp, :smtp => {
+      :host => 'smtp.gmail.com',
+      :port => '587',
+      :user => ENV['GMAIL_USERNAME'],
+      :password => ENV['GMAIL_PASSWORD'],
+      :auth => :plain,
+      :domain => 'gmail.com'
+     },
+     :headers => { "Reply-To" => params[:email] }
      redirect '/thanks', 303
 end  
 
