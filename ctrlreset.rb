@@ -33,5 +33,5 @@ get '/thanks' do
 end
 
 not_found do
-  redirect '/'
+  erb :404
 end
